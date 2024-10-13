@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-application-developer-ex
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: argocd-application-developer-ex
+  template:
+    metadata:
+      labels:
+        app: argocd-application-developer-ex
+    spec:
+      containers:
+        - image: ghcr.io/pattybardo/argocd-application-developer-ex:sha-9cecc6b
+          name: argocd-application-developer-ex
+          ports:
+            - containerPort: 8000
