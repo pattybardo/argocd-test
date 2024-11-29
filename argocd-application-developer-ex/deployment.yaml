@@ -14,7 +14,7 @@ spec:
         app: argocd-application-developer-ex
     spec:
       containers:
-        - image: ghcr.io/pattybardo/argocd-application-developer-ex:sha-45f844d
+        - image: ghcr.io/pattybardo/argocd-application-developer-ex:sha-6d22034
           name: argocd-application-developer-ex
           ports:
             - containerPort: 8000
