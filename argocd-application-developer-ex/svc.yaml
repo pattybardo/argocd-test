@@ -2,7 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: argocd-application-developer-ex
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
 spec:
+  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8000
