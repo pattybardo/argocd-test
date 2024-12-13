@@ -4,7 +4,7 @@ metadata:
   name: argocd-application-developer-ex
   namespace: argocd
 spec:
-  replicas: 1
+  replicas: 20
   revisionHistoryLimit: 3
   selector:
     matchLabels:
